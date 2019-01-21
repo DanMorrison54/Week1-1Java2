@@ -79,6 +79,7 @@ class Square extends Shape{
     private int width;
     Square(int length, int width){
         this.length=length;
+        System.out.println("i can push");
         this.width=width;
     }
 
