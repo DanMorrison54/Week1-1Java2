@@ -1,6 +1,8 @@
 package JavaWeek1_2.Java2Assignment1BankAccountsDanielM;
 
 
+import java.math.BigInteger;
+
 /**
  * @Author Daniel Morrison
  * This program is a simple savings account using Simple Interest to increase the principle (amount in the account) over time.
@@ -19,9 +21,10 @@ public class SavingsAccount extends Account {
      * @throws IllegalArgumentException
      */
     SavingsAccount(double rate, double bal,long accNum) throws IllegalArgumentException {
-        if (bal <= 0 || rate <= 0||(accNum>=100000000000L&&accNum<=999999999999L))
+        //accNum>=100000000000L&&accNum<=999999999999L
+        if (bal <= 0 || rate <= 0) {
             throw new IllegalArgumentException("balance or rate cannot be less than or equal to zero"); //throwing exception if rate or balance is zero or lower as that would make no sense
-
+        }
         else {
             this.setBal(bal);
             this.time = 0;
@@ -50,6 +53,11 @@ public class SavingsAccount extends Account {
 
     public void setRate(double rate) {
         this.rate = rate;
+    }
+
+    @Override
+    public String toString() {
+        return "savings account num: "+new BigInteger(Long.toString((getAccountNumber())))+" balance:  balance:"+getBalance()+" rate:"+rate;
     }
 }
 

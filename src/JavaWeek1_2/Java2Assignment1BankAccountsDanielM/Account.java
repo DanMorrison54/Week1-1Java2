@@ -11,7 +11,7 @@ package JavaWeek1_2.Java2Assignment1BankAccountsDanielM;
         private long accnum;  //The account number
 
 
-        public Account(int a)
+        public Account(long a)
         {
             bal=0.0;
             accnum=a;
@@ -43,7 +43,7 @@ package JavaWeek1_2.Java2Assignment1BankAccountsDanielM;
             return bal;
         }
 
-        public double getAccountNumber()
+        public long getAccountNumber()
         {
             return accnum;
         }
