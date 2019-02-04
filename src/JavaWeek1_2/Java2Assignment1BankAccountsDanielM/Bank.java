@@ -8,6 +8,7 @@ import java.util.Arrays;
  *
  * a bank class that merely holds and updates accounts
  */
+import java.util.ArrayList;
  class Bank
 {
 
@@ -21,6 +22,10 @@ import java.util.Arrays;
      */
     Bank(Account[] accounts){
         this.accounts= Arrays.copyOf(accounts,3); //copying passed in Array to this account
+
+    }
+    Bank(){
+
     }
 
     /**
@@ -44,7 +49,7 @@ import java.util.Arrays;
 
     /**
      *
-     * @return retuns the Account array so a user can obtain what accounts the bank has
+     * @return returns the Account array so a user can obtain what accounts the bank has
      */
     public Account[] getAccounts() {
         return accounts;
@@ -57,4 +62,5 @@ import java.util.Arrays;
     public void setAccounts(Account[] accounts) {
         this.accounts = accounts;
     }
+
 }
